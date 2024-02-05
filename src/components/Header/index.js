@@ -1,10 +1,5 @@
 import { Fragment } from 'react';
-import { Disclosure, Menu, Transition } from '@headlessui/react'
-import SaveIcon from '@/assets/saveIcon';
-import Ellipsis from '@/assets/ellipsis';
-import PlayIcon from '@/assets/playIcon';
-import SearchIcon from '@/assets/searchIcon';
-import Bars from '@/assets/bars';
+import { Disclosure, Menu, Transition } from '@headlessui/react';
 import Logo from '../Logo';
 
 
@@ -32,11 +27,9 @@ const Header = () => {
               <div className="flex items-center lg:hidden">
                 {/* Mobile menu button */}
                 <Disclosure.Button className="inline-flex items-center justify-center p-2 text-gray-400 rounded-md hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
-                  {open ? (
-                    <Bars />
-                  ) : (
-                    <Bars />
-                  )}
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                  </svg>
                 </Disclosure.Button>
               </div>
 
@@ -54,7 +47,9 @@ const Header = () => {
                     placeholder="Search for Movies, TV Shows, Themes & Cast"
                   />
                   <div className="absolute inset-y-0 right-0 flex items-center px-5 py-2 my-2 border-l border-gray-300 cursor-pointer">
-                    <SearchIcon />
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                    </svg>
                   </div>
                 </div>
               </div>
@@ -64,7 +59,9 @@ const Header = () => {
               <Menu as="div" className="relative ml-3">
                 <div>
                   <Menu.Button className="flex p-3 text-sm transition-all duration-300 bg-gray-200 rounded-full hover:bg-gray-300">
-                    <Ellipsis className="" />
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM12.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM18.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                    </svg>
                   </Menu.Button>
                 </div>
                 <Transition
@@ -136,18 +133,25 @@ const Header = () => {
                 </Transition>
               </Menu>
               <div className="flex p-3 text-sm transition-all duration-300 bg-gray-200 rounded-full hover:bg-gray-300">
-                <PlayIcon />
+                <svg svg xmlns="http://www.w3.org/2000/svg" className='w-6 h-6' viewBox="0 0 20 20" >
+                  <path fill="currentColor" d="M2.93 17.07A10 10 0 1 1 17.07 2.93A10 10 0 0 1 2.93 17.07m12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32M7 6l8 4l-8 4z">
+                  </path>
+                </svg >
               </div>
               <button
                 type="button"
                 className="flex items-center gap-3 px-10 py-2.5 text-xl font-medium text-white border border-transparent rounded-full shadow-sm bg-emerald-500 hover:bg-emerald-600 focus:outline-none"
               >
-                <SaveIcon />
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor" className="w-6">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z" />
+                </svg>
                 Wishlist
               </button>
             </div>
             <div className='lg:hidden flex items-center'>
-              <SearchIcon />
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+              </svg>
             </div>
           </div>
 
